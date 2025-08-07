@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    //Colors
+    $PinkBerry: #fa9da6;
+    $FadedSalmon: #fbccd4;
+    $PeachyYellow: #fbdfa2;
+    $SandyPaper: #f3e2c6;
+    $ForestGreen: #8eb694;
+    $MudBrown: #3a3634;
+    $White: #f8f0e4;
+    //Fonts
+    $Poppins: 'Poppins', sans-serif;
+    $Baskerville: 'Baskervville', serif;
+    //Border
+    $borderRadius: 1rem;
+    $GreenBorder: 0.25rem solid $ForestGreen;
+    $RedBorder: 0.25rem solid $PinkBerry;
+    $PinkBorder: 0.25rem solid $FadedSalmon;
+    $BlackBorder: 0.25rem solid $MudBrown;
+    //Standard Styles
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $Poppins;
+    background-color: $SandyPaper;
+    color: $MudBrown;
+    transition: all 300ms ease-in-out;
+    overflow-x: hidden;
+    //Headline Styles
+    h1 {
+        font-family: $Poppins;
+        color: $MudBrown;
+        text-align: left;
+        font-size: 3rem;
+        font-weight: 300;
+        margin-top: 4rem;
+    }
+    h2 {
+        font-family: $Baskerville;
+        font-style: italic;
+        color: $MudBrown;
+        font-size: 4rem;
+        font-weight: 400;
+        padding-top: 6rem;
+    }
+    .h2right {
+        text-align: right;
+    }
+    h3 {
+        font-family: $Poppins;
+        color: $MudBrown;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 600;
+        // margin-top: 2rem;
+    }
+    h4 {
+        font-family: $Poppins;
+        color: $White;
+        text-align: left;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.5rem;
+    }
+    //Paragraph Styles
+    p {
+        font-family: $Poppins;
+        color: $MudBrown;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 4rem;
+    }
+    //List Item Styles
+    li {
+        list-style: none;
+    }
+    //Link Styles
+    a {
+        text-decoration: none;
+        color: $MudBrown;
+        font-weight: 600;
+    }
+    //Component Styles
+    #navMenuOpen {
+            display: none;
+        }
+    .open {
+        #navMenuOpen {
+            display: flex;
+            position: fixed;
+            top: 0;
+            text-align: center;
+            padding: 1rem;
+            background-color: $FadedSalmon;
+            border-bottom: $PinkBorder;
+            height: 100vh;
+            width: 100vw;
+            ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+                li {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    //Content Container
+    #contentdiv {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 1.5rem;
+        .missionImg {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            align-items: end;
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: 4rem;
+            img {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                width: 100%;
+                border-radius: $borderRadius;
+                border: $GreenBorder;
+            }
+            button {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                border: 0.1rem solid $ForestGreen;
+                border-radius: 1rem;
+                background-color: rgb(255, 255, 255, 0.1); // Semi-transparent background
+                padding: 0 0.5rem;
+                bottom: 1rem;
+                backdrop-filter: blur(0.25rem);
+                -webkit-backdrop-filter: blur(0.25rem);
+                img {
+                    position: relative;
+                    border: none;
+                    border-radius: 0;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+            }
+        }
+        .aboutImg {
+            width: 100%;
+            height: auto;
+            margin-top: 4rem;
+            img {
+                width: 100%;
+                border-radius: $borderRadius;
+                border: $PinkBorder;
+            }
+        }
+    }
+    //Navigation Bar
+    .NavBarWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            width: 50%;
+            max-height: 4rem;
+            img {
+                width: auto;
+                max-height: 4rem;
+            }
+        }
+        .menuBtn {
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            background-color: $MudBrown;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    }
+}

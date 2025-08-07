@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klausi liebt Loni</title>
+<!-- Stylesheets -->
+    <link rel="stylesheet" href="main.css">
+<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Menü -->
+    <div id="navMenuOpen">
+        <ul>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+    <div id="contentdiv">
+        <!-- Inhalt Start -->
+        <div class="NavBarWrapper">
+            <div class="logo">
+                <img href="" src="/resources/Logo-Swoosh.svg" alt="Logo von Aron Zimmermann, das Wort Aron in einer geschwungenen Schriftart">
+            </div>
+            <div class="menuBtn"></div>
+        </div>
+        <header>
+            <h1>Hey Partner!</h1>
+            <h3>Hier steht was wichtiges.</h3>
+            <div class="missionImg">
+                <img src="/resources/mission.jpg" alt="Bild einer dunkelgrauen Straße, die durch den Wald führt. Das Bild ist aus der Vogelperspektive aufgenommen.">
+                <button type="button" onclick="window.location.href='https://www.google.com'">
+                    <h4>Mehr zur Mission</h4>
+                    <img src="/resources/arrow_right.svg" alt="Pfeil nach rechts">
+                </button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nulla? Laudantium consequuntur eos odit cum placeat inventore minus, enim magni sapiente tempore atque, quidem iure, voluptatum quam dicta at aperiam!</p>
+        </header>
+        <h2 id="about" class="h2right">Über mich.</h2>
+        <div class="aboutImg">
+            <img src="/resources/About_us.png" alt="Bild von Aron Zimmermann, der auf einer Steintreppe im Park sitzt und in die Kamera lächelt.">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nulla? Laudantium consequuntur eos odit cum placeat inventore minus, enim magni sapiente tempore atque, quidem iure, voluptatum quam dicta at aperiam!</p>
+        <!-- Inhalt Ende -->
+    </div>
+
+    <script>
+        const menuBtn = document.querySelector('.menuBtn');
+        const mainNav = document.getElementById('navMenuOpen');
+
+        console.log(mainNav)
+
+        const openNav = function (a) {
+            document.querySelector('body').classList.toggle('open')
+        };
+
+        menuBtn.addEventListener('click', openNav);
+        mainNav.addEventListener('click', openNav);
+    </script>
+</body>
+</html>
